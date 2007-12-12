@@ -19,7 +19,7 @@ Source2: openrm-cave-demo-%{version}.tar.bz2
 URL: http://openrm.sourceforge.net/
 License: LGPL
 Group: System/Libraries
-Buildrequires: XFree86-devel libMesaGLU-devel
+Buildrequires: X11-devel libMesaGLU-devel
 BuildRoot: %{_tmppath}/%name-buildroot
 Requires: libGL.so.1, libGLU.so.1, libjpeg.so.62
 
