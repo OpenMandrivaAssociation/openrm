@@ -63,7 +63,7 @@ OpenRM can be used on any platform that has OpenGL
 %setup -q -T -a 1 -D -c
 %setup -q -T -a 2 -D -c
 
-perl -pi -e 's/"CFLAGS = .*"/"CFLAGS = %optflags -DRM_X -fPIC"/' %{rmver}/make.cfg
+perl -pi -e 's/"CFLAGS = .*"/"CFLAGS = %optflags -c -D_BSD_SOURCE -finline-functions -fomit-frame-pointer -DRM_X -fPIC"/' %{rmver}/make.cfg
 # (tv) fix typos breaking build in build system:
 perl -pi -e 's/"\\/" \\/' %{rmver}/make.cfg
 %ifarch ppc64 x86_64 sparc64 alpha
