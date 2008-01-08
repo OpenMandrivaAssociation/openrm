@@ -65,7 +65,7 @@ OpenRM can be used on any platform that has OpenGL
 
 perl -pi -e 's/"CFLAGS = .*/"CFLAGS = %optflags -DRM_X"\\/' %{rmver}/make.cfg
 %ifarch ppc64 x86_64 sparc64 alpha
-perl -pi -e '/"ARCHFLAGS.*/"ARCHFLAGS = 64"/' %{rmver}/make.cfg
+perl -pi -e 's/"ARCHFLAGS.*/"ARCHFLAGS = 64"/' %{rmver}/make.cfg
 %endif
 
 %build
