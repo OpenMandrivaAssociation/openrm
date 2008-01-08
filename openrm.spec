@@ -71,19 +71,18 @@ perl -pi -e 's/"ARCHFLAGS.*/"ARCHFLAGS = 64"/' %{rmver}/make.cfg
 %build
 export CFLAGS='%optflags'
 
-(
-cd %{rmver}
+pushd %{rmver}
 make linux
 make docs
-)
-(
-cd rmdemo
+popd
+
+pushd rmdemo
 ./configure -opengl=%_prefix -rm=%_prefix -x11=%_prefix/X11R6 -opt='%optflags' -jpeg=%_prefix
-)
-(
-cd openRMCaveDemos
+popd
+
+pushd openRMCaveDemos
 ./configure -opengl=%_prefix -rm=%_prefix -x11=%_prefix/X11R6 -opt='%optflags'
-)
+popd
 
 %install
 mkdir -p ${RPM_BUILD_ROOT}/usr
