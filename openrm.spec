@@ -1,6 +1,6 @@
 %define name openrm
 %define version 1.5.2
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define rmver rm152
 
