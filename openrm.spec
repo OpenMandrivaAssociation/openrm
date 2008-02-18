@@ -33,7 +33,7 @@ OpenRM can be used on any platform that has OpenGL
 %package -n %libname
 License: LGPL
 Group: System/Libraries
-Summary: OpenRM is a development environment to build high performance graphics
+Summary: Development environment to build high performance graphics
 
 %description -n %libname
 OpenRM Scene Graph is set of tools and utilities that implement a
@@ -45,7 +45,7 @@ OpenRM can be used on any platform that has OpenGL
 %package -n %libnamedev
 License: LGPL
 Group: System/Libraries
-Summary: OpenRM is a development environment to build high performance graphics
+Summary: Development environment to build high performance graphics
 Requires: %libname = %version
 Provides: libopenrm-devel
 
