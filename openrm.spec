@@ -92,9 +92,13 @@ cp -arf %{rmver}/include ${RPM_BUILD_ROOT}/usr
 cp -far %{rmver}/lib ${RPM_BUILD_ROOT}/usr
 
 
+%if %mdkversion < 200900
 %post -n %libname -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %libname -p /sbin/ldconfig
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
