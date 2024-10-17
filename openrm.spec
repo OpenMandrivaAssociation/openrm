@@ -16,7 +16,7 @@ Release: %release
 Source0: openrm-devel-%{version}-3.tar.bz2
 Source1: openrm-demo-%{version}.tar.bz2
 Source2: openrm-cave-demo-%{version}.tar.bz2
-URL: http://openrm.sourceforge.net/
+URL: https://openrm.sourceforge.net/
 License: LGPL
 Group: System/Libraries
 Buildrequires: X11-devel mesaglu-devel
